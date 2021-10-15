@@ -26,6 +26,24 @@ The number of nodes in the list is in the range [1, 100].
  * @return {ListNode}
  */
 var middleNode = function(head) {
+  //peer programmed to see the linked-lists
+    // console.log('start', head)
+    // console.log('first time slow', head.next)
+    // console.log('first time fast', head.next.next)
+    // console.log('first time fast', head.next.next)
+    //  console.log('?? time fast', head.next.next.next)
+    //  console.log('?? time ??', head.next.next.next.next)
+    
+     //76 ms runtime from Leetcode soln
+    let =   slow = fast = head;
+      
+    while (fast && fast.next) {
+ 
+        slow = slow.next;
 
-  
+        fast = fast.next.next;
+    }
+ 
+    return slow;
+
 }
